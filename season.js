@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category");
+const category = urlParams.get("object");
 
 fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
   method: "GET",
