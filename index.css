@@ -1,0 +1,77 @@
+.grid_forside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh; /* Fyld hele skærmen */
+}
+#winter {
+  background-color: #586adf;
+  padding: 100px;
+}
+
+#spring {
+  background-color: #5dac6a;
+  padding: 100px;
+}
+
+#summer {
+  background-color: #eeac64;
+  padding: 100px;
+}
+
+#autumn {
+  background-color: #896c87;
+  padding: 100px;
+}
+#winter,
+#spring,
+#summer,
+#autumn {
+  padding: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid_forside {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #winter,
+  #spring,
+  #summer,
+  #autumn {
+    padding: 19px; /* Reducer padding i mobiltilstand for at tilpasse indholdet */
+  }
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Fyld hele boksen lodret */
+}
+
+a {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.8s;
+}
+
+a:hover {
+  transform: scale(1.1); /*zoom effekt på knapper*/
+}
+
+@media screen and (min-width: 1200px) {
+  a {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+  }
+}

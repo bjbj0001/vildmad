@@ -27,7 +27,8 @@ body {
 }
 
 button {
-  padding: 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
   background: #91a0f2;
   color: #fff;
   border: solid 2px white;
@@ -35,7 +36,6 @@ button {
   animation: pulse 1.5s infinite;
   font-size: 0.7rem;
   margin-top: 5px;
-  border-radius: 10px;
   margin-right: 30px;
   width: 140px;
 }
@@ -85,7 +85,6 @@ button {
     animation: pulse 1.5s infinite;
     font-size: 1rem;
     margin-top: 20px;
-    border-radius: 10px;
     margin-right: 50px;
     width: 160px;
   }
