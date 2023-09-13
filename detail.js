@@ -27,6 +27,7 @@ function showDetail(object) {
 
   productDetailCopy.querySelector("h1").textContent = object[0].title;
   productDetailCopy.querySelector("h2").textContent = object[0].type;
+  productDetailCopy.querySelector("h3").textContent = object[0].place;
   productDetailCopy.querySelector("img").setAttribute("src", object[0].image);
 
   document.body.appendChild(productDetailCopy);
