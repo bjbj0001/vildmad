@@ -18,16 +18,33 @@
   border-radius: 20px;
   margin: 30px;
 }
-
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
 @media (min-width: 800px) {
   .object-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Justerer mellemrummet mellem kolonnerne */
-    gap: 20px; /* Afstand mellem kolonnerne */
-    max-width: 1200px; /* Valgfri maksimal bredde for to kolonner */
-    margin: 0 auto; /* Centrerer kolonnerne på siden */
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .object {
+    width: calc(50% - 15px); /* Beregnet bredde for at tage højde for gap */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center; /* Centrer tekst horisontalt */
+    display: flex;
+    flex-direction: column; /* Stak indholdet vertikalt */
+    align-items: center; /* Centrer indholdet vertikalt */
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 25%;
   }
 }
 a {
