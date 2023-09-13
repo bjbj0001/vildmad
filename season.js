@@ -3,6 +3,23 @@ const category = urlParams.get("season");
 
 console.log(category);
 
+function changeBackgroundColor(category) {
+  const seasonColors = {
+    winter: "#3D50E3",
+    spring: "#439E46",
+    autumn: "#745274",
+    summer: "#E99E3C",
+  };
+
+  const body = document.body;
+
+  if (seasonColors[category]) {
+    body.style.backgroundColor = seasonColors[category];
+  }
+}
+
+changeBackgroundColor(category);
+
 fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
   method: "GET",
   headers: {
