@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="general.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <main>
-    <section>
-      <a id="winter" href="season.html?season=winter">winter</a>
-      <a id="spring" href="season.html?season=spring">spring</a>
-      <a id="autumn" href="season.html?season=autumn">autumn</a>
-      <a id="summer" href="season.html?season=summer">summer</a>
-    </section>
-  </main>
-  <script src="frontpage.js"></script>
-</body>
-
+  <body>
+    <main>
+      <div class="overlay">
+        <div class="popup">
+          <div class="grid_popup">
+            <div>
+              <h1>billede</h1>
+            </div>
+            <div>
+              <h2 class="velkommen_til">Velkommen til!</h2>
+              <p class="jeg_hedder_birk">Jeg hedder Birk! Vil du med mig ud og sanke? "At Sanke" betyder at samle sin mad i naturen, og det er super sjovt!</p>
+              <button id="closePopup" type="button">
+                Klik her for at <br />
+                komme igang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <a id="winter" href="season.html?season=winter">winter</a>
+        <a id="spring" href="season.html?season=spring">spring</a>
+        <a id="autumn" href="season.html?season=autumn">autumn</a>
+        <a id="summer" href="season.html?season=summer">summer</a>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+    <script src="frontpage.js"></script>
+  </body>
 </html>
