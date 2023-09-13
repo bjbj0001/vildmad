@@ -29,6 +29,15 @@
 #autumn {
   padding: 100px;
 }
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 100%;
+  width: 50%;
+}
 
 @media screen and (max-width: 768px) {
   .grid_forside {
@@ -61,10 +70,6 @@ a {
   transition: transform 0.8s;
 }
 
-a:hover {
-  transform: scale(1.1); /*zoom effekt på knapper*/
-}
-
 @media screen and (min-width: 1200px) {
   a {
     font-family: "futura-pt", sans-serif;
@@ -73,5 +78,17 @@ a:hover {
     text-decoration: none;
     color: white;
     font-size: 3rem;
+  }
+  .center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100%;
+    width: 30%;
+  }
+  a:hover {
+    transform: scale(1.1); /*zoom effekt på knapper*/
   }
 }

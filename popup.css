@@ -40,6 +40,13 @@ button {
   width: 140px;
 }
 
+.forside_dreng {
+  width: 160%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -55,8 +62,8 @@ button {
 .grid_popup {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 10px;
+  gap: 70px;
+  padding: 5px;
 }
 
 .jeg_hedder_birk {
@@ -73,20 +80,20 @@ button {
     border-radius: 70px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     width: 70%;
-    height: 60%;
+    height: 70%;
   }
 
   button {
-    padding: 15px 20px;
+    padding: 30px 40px;
     background: #91a0f2;
     color: #fff;
     border: solid 2px white;
     cursor: pointer;
     animation: pulse 1.5s infinite;
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-top: 50px;
     margin-right: 50px;
-    width: 160px;
+    width: 200px;
   }
 
   @keyframes pulse {
@@ -100,11 +107,16 @@ button {
       transform: scale(1);
     }
   }
-
+  .forside_dreng {
+    width: 70%;
+    height: 100%;
+    margin-top: 0;
+  }
   .grid_popup {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
+    padding: 50px;
+    gap: 0;
   }
 
   .jeg_hedder_birk {
