@@ -40,7 +40,7 @@ function showObjects(objects) {
         return false;
       }
     }
-  } else if (category == "autmn") {
+  } else if (category == "autumn") {
     function monthOnly(single) {
       if (single.month.includes("8") || single.month.includes("9") || single.month.includes("10")) {
         return true;
