@@ -74,7 +74,6 @@ function showObject(object) {
   copy.querySelector("h4").textContent = object.month;
   copy.querySelector(".read_more").setAttribute("href", `object.html?id=${object.id}`);
   copy.querySelector("img").setAttribute("src", object.image);
-  // copy.querySelector("img").src = `https://vildmadv2.vps.webdock.io/application/files/3916/2436/6075/Vild-paere_ravarekort_app${object.image}.png`;
 
   //
   https: document.querySelector("main").appendChild(copy);
