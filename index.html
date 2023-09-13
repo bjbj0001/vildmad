@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="popup.css" />
-    <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="index.css" />
-  </head>
 
-  <body>
-    <main>
-      <div class="overlay">
-        <div class="popup">
-          <div class="grid_popup">
-            <div class="forside_dreng">
-              <img src="forside_dreng1.svg" alt="forside_dreng" />
-            </div>
-            <div>
-              <h1 class="velkommen_til">Velkommen</h1>
-              <p class="jeg_hedder_birk">
-                Jeg hedder Birk! <br />
-                Vil du med mig ud og sanke? <br /><br />
-                "At Sanke" betyder at samle sin mad i naturen, og det er super sjovt!
-              </p>
-              <button id="closePopup" type="button">
-                Klik her for at <br />
-                komme igang
-              </button>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="general.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <main>
+    <img id="logo" src="logo_vildmad.svg" alt="vildmad_logo">
+    <div class="overlay">
+      <div class="popup">
+        <div class="grid_popup">
+          <div class="forside_dreng">
+            <img src="forside_dreng1.svg" alt="forside_dreng" />
+          </div>
+          <div>
+            <h1 class="velkommen_til">Velkommen</h1>
+            <p class="jeg_hedder_birk">
+              Jeg hedder Birk! <br />
+              Vil du med mig ud og sanke? <br /><br />
+              "At Sanke" betyder at samle sin mad i naturen, og det er super sjovt!
+            </p>
+            <button id="closePopup" type="button">
+              Klik her for at <br />
+              komme igang
+            </button>
           </div>
         </div>
       </div>
-      <img src="forside_dreng.svg" alt="forside_dreng" class="center-image" />
-      <section class="grid_forside">
-        <a id="winter" href="season.html?season=winter" class="center-content">VINTER</a>
-        <a id="spring" href="season.html?season=spring" class="center-content">FORÅR</a>
-        <a id="autumn" href="season.html?season=autumn" class="center-content">EFTERÅR</a>
-        <a id="summer" href="season.html?season=summer" class="center-content">SOMMER</a>
-      </section>
-    </main>
-    <script src="popup.js"></script>
-    <script src="frontpage.js"></script>
-  </body>
+    </div>
+    <img src="forside_dreng.svg" alt="forside_dreng" class="center-image" />
+    <section class="grid_forside">
+      <a id="winter" href="season.html?season=winter" class="center-content">VINTER</a>
+      <a id="spring" href="season.html?season=spring" class="center-content">FORÅR</a>
+      <a id="autumn" href="season.html?season=autumn" class="center-content">EFTERÅR</a>
+      <a id="summer" href="season.html?season=summer" class="center-content">SOMMER</a>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+  <script src="frontpage.js"></script>
+</body>
+
 </html>
