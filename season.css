@@ -23,7 +23,6 @@ body {
   margin: 30px;
 }
 img {
-  height: 100%;
   width: 100%;
   border-radius: 20px;
 }
@@ -33,7 +32,6 @@ img {
     grid-template-columns: 1fr 1fr;
   }
   img {
-    height: 100%;
     width: 100%;
     border-radius: 20px;
   }
