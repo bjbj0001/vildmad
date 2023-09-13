@@ -18,7 +18,7 @@ function showObjects(objects) {
 }
 
 function showObject(object) {
-  console.log(object);
+  console.log("hej", object);
   //fang template
   const template = document.querySelector("#ObjectTemplate").content;
   //lav en kopi
