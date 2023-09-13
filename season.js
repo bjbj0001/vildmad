@@ -3,22 +3,26 @@ const category = urlParams.get("season");
 
 console.log(category);
 
-function changeBackgroundColor(category) {
+// Define a function to change the background color and overskrift text based on the category
+function changeBackgroundColorAndOverskrift(category) {
   const seasonColors = {
-    winter: "#3D50E3",
-    spring: "#439E46",
-    autumn: "#745274",
-    summer: "#E99E3C",
+    winter: { color: "#3D50E3", overskrift: "VINTER" },
+    spring: { color: "#439E46", overskrift: "FORÅR" },
+    autumn: { color: "#745274", overskrift: "EFTERÅR" },
+    summer: { color: "#E99E3C", overskrift: "SOMMER" },
   };
 
-  const body = document.body;
+  const body = document.body; // Get the <body> element for color
+  const overskrift = document.getElementById("overskrift"); // Get the <h1> element
 
   if (seasonColors[category]) {
-    body.style.backgroundColor = seasonColors[category];
+    body.style.backgroundColor = seasonColors[category].color;
+    overskrift.textContent = seasonColors[category].overskrift;
   }
 }
 
-changeBackgroundColor(category);
+// Call the function to change the background color and overskrift text
+changeBackgroundColorAndOverskrift(category);
 
 fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
   method: "GET",
