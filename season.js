@@ -92,7 +92,7 @@ function showObject(object) {
   copy.querySelector("h1").textContent = object.title;
   copy.querySelector("h2").textContent = object.type;
   copy.querySelector("h3").textContent = object.season;
-  copy.querySelector("h4").textContent = object.month;
+  // copy.querySelector("h4").textContent = object.month;
   copy.querySelector(".read_more").setAttribute("href", `object.html?id=${object.id}`);
   copy.querySelector("img").setAttribute("src", object.image);
 
