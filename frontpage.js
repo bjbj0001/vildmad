@@ -8,7 +8,9 @@ if (!sessionStorage.getItem("winterData")) {
   })
     .then((res) => res.json())
     .then((data) => {
+      // console.log("den nye data", data);
       // Extract the month values for Winter (0, 1, 11)
+
       const winterData = data.filter((item) => [0, 1, 11].includes(item.month));
 
       // Store the winterData in sessionStorage for access in "season.html"

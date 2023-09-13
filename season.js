@@ -1,5 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("object");
+const category = urlParams.get("season");
+
+console.log(category);
 
 fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
   method: "GET",
@@ -12,11 +14,38 @@ fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
 
 function showObjects(objects) {
   //looper og kalder showObject
-  objects.forEach(showObject);
+  console.log(objects);
+
+  if (category == "winter") {
+    function monthOnly(single) {
+      if (single.month.includes("3") || single.month.includes("4")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  } else if (category == "sommer") {
+    function monthOnly(single) {
+      if (single.month.includes("1") || single.month.includes("2")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  let onlymonth = objects.filter(monthOnly);
+  console.log(onlymonth);
+
+  objects.forEach((element) => {
+    // console.log(element.month);
+  });
+
+  onlymonth.forEach(showObject);
 }
 
 function showObject(object) {
-  console.log(object);
+  // console.log(object); casper
   //fang template
   const template = document.querySelector("#ObjectTemplate").content;
   //lav en kopi
@@ -27,7 +56,7 @@ function showObject(object) {
   copy.querySelector("h2").textContent = object.type;
   copy.querySelector("h3").textContent = object.season;
   copy.querySelector("h4").textContent = object.month;
-  copy.querySelector("img").src = `https://vildmadv2.vps.webdock.io/application/files/3916/2436/6075/Vild-paere_ravarekort_app${object.image}.png`;
+  // copy.querySelector("img").src = `https://vildmadv2.vps.webdock.io/application/files/3916/2436/6075/Vild-paere_ravarekort_app${object.image}.png`;
 
   //
   https: document.querySelector("main").appendChild(copy);
