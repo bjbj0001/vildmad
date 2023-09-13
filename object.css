@@ -1,0 +1,44 @@
+/* Grundlæggende CSS for at ændre størrelsen af billedet */
+img {
+  height: auto; /* Sætter højden til at skalere i forhold til bredden */
+  max-width: 100%; /* Begrænser maksimal bredden til 100% af forælderens bredde */
+  border-radius: 20px;
+}
+
+/* Medieforespørgsel for skærme, der er bredere end 800px */
+@media (min-width: 800px) {
+  img {
+    height: auto; /* Sætter højden til at skalere i forhold til bredden */
+    max-width: 95%; /* Begrænser maksimal bredden til 100% af forælderens bredde */
+    border-radius: 20px;
+  }
+}
+.grid_object {
+  max-width: 100px; /* Valgfri maksimal bredde for to kolonner */
+  margin: 0 auto; /* Centrerer kolonnerne på siden */
+}
+
+.detail {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center; /* Centrer tekst horisontalt */
+  display: flex;
+  flex-direction: column; /* Stak indholdet vertikalt */
+  align-items: center; /* Centrer indholdet vertikalt */
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 80%;
+}
+
+@media (min-width: 800px) {
+  .grid_object {
+    max-width: 100px; /* Valgfri maksimal bredde for to kolonner */
+    margin: 0 auto; /* Centrerer kolonnerne på siden */
+  }
+  .detail {
+    margin: 30px auto;
+    max-width: 30%;
+    height: 90%;
+  }
+}
