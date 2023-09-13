@@ -18,15 +18,31 @@ function showObjects(objects) {
 
   if (category == "winter") {
     function monthOnly(single) {
-      if (single.month.includes("3") || single.month.includes("4")) {
+      if (single.month.includes("11") || single.month.includes("0") || single.month.includes("1")) {
         return true;
       } else {
         return false;
       }
     }
-  } else if (category == "sommer") {
+  } else if (category == "spring") {
     function monthOnly(single) {
-      if (single.month.includes("1") || single.month.includes("2")) {
+      if (single.month.includes("2") || single.month.includes("3") || single.month.includes("4")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  } else if (category == "summer") {
+    function monthOnly(single) {
+      if (single.month.includes("5") || single.month.includes("6") || single.month.includes("7")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  } else if (category == "autmn") {
+    function monthOnly(single) {
+      if (single.month.includes("8") || single.month.includes("9") || single.month.includes("10")) {
         return true;
       } else {
         return false;
