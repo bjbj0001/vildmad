@@ -3,26 +3,48 @@ const category = urlParams.get("season");
 
 console.log(category);
 
-// Define a function to change the background color and overskrift text based on the category
-function changeBackgroundColorAndOverskrift(category) {
-  const seasonColors = {
-    winter: { color: "#3D50E3", overskrift: "VINTER" },
-    spring: { color: "#439E46", overskrift: "FORÅR" },
-    autumn: { color: "#745274", overskrift: "EFTERÅR" },
-    summer: { color: "#E99E3C", overskrift: "SOMMER" },
+// Update based on season
+function updateContentBasedOnSeason(category) {
+  const seasonInfo = {
+    winter: {
+      backgroundColor: "#3D50E3",
+      overskrift: "VINTER",
+      buttonText: ["DECEMBER", "JANUAR", "FEBRUAR"],
+    },
+    spring: {
+      backgroundColor: "#439E46",
+      overskrift: "FORÅR",
+      buttonText: ["MARTS", "APRIL", "MAJ"],
+    },
+    autumn: {
+      backgroundColor: "#745274",
+      overskrift: "EFTERÅR",
+      buttonText: ["SEPTEMBER", "OKTOBER", "NOVEMBER"],
+    },
+    summer: {
+      backgroundColor: "#E99E3C",
+      overskrift: "SOMMER",
+      buttonText: ["JUNI", "JULI", "AUGUST"],
+    },
   };
 
-  const body = document.body; // Get the <body> element for color
+  const body = document.body; // Get the <body> element
   const overskrift = document.getElementById("overskrift"); // Get the <h1> element
+  const buttons = document.querySelectorAll(".button p"); // Get all <p> elements inside .button divs
 
-  if (seasonColors[category]) {
-    body.style.backgroundColor = seasonColors[category].color;
-    overskrift.textContent = seasonColors[category].overskrift;
+  if (seasonInfo[category]) {
+    body.style.backgroundColor = seasonInfo[category].backgroundColor;
+    overskrift.textContent = seasonInfo[category].overskrift;
+
+    // Update button text based on the category
+    buttons.forEach((button, index) => {
+      button.textContent = seasonInfo[category].buttonText[index];
+    });
   }
 }
 
-// Call the function to change the background color and overskrift text
-changeBackgroundColorAndOverskrift(category);
+// Call the function to update content based on the season
+updateContentBasedOnSeason(category);
 
 fetch("https://qeeuingoibugjpdgtfvo.supabase.co/rest/v1/vildmad", {
   method: "GET",
