@@ -1,7 +1,11 @@
 body {
   background-color: #586adf;
 }
-
+#dreng {
+  position: relative;
+  z-index: -3;
+  top: 90px;
+}
 .object-container {
   display: grid;
   justify-content: space-between; /* Justerer mellemrummet mellem kolonnerne */ /* Afstand mellem kolonnerne */
@@ -32,6 +36,11 @@ img {
     height: 100%;
     width: 100%;
     border-radius: 20px;
+  }
+  #dreng {
+    top: 82px;
+    width: 20%;
+    height: 50%;
   }
   .object {
     box-sizing: border-box;
